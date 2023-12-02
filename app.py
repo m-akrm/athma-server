@@ -7,7 +7,6 @@ import tensorflow as tf
 import numpy as np
 
 model=tf.keras.models.load_model('diagnosis_GRU_CNN_1.h5')
-model.summary()
 classes = ["COPD" ,"Healthy", "Pneumoina", "URTI", "Healthy"]
 
 def predict_class(audio_file_path, gru_model=model, classes=classes, features=52):
@@ -20,7 +19,6 @@ def predict_class(audio_file_path, gru_model=model, classes=classes, features=52
     print(prediction)
     return prediction
 app = FastAPI()
-predict_class("normal.wav")
 
 @app.get("/")
 def read_root():
