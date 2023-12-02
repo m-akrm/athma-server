@@ -5,3 +5,4 @@ numpy
 librosa
 typing
 python-multipart
+resampy
