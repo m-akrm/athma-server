@@ -39,3 +39,9 @@ async def upload_sound_file(file: UploadFile):
         prediction=predict_class(file.file)
         return {'prediction': prediction}
     return {'prediction': "Invalid file format"} 
+
+@app.post("/process_data")
+async def process_data(data: List[int]):
+    # Your processing logic here
+    result = {"received_data": data[0]}
+    return result
