@@ -5,6 +5,8 @@ from fastapi.responses import JSONResponse
 import librosa
 import tensorflow as tf
 import numpy as np
+from pydantic import List
+
 
 model=tf.keras.models.load_model('diagnosis_GRU_CNN_1.h5')
 classes = ["COPD" ,"Healthy", "Pneumoina", "URTI", "Healthy"]
