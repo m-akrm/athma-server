@@ -6,3 +6,4 @@ librosa
 typing
 python-multipart
 resampy
+pydantic
