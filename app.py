@@ -32,7 +32,7 @@ def predict_class(data ,features=52):
     mfccs = np.mean(librosa.feature.mfcc(y=audio_float, sr=1000, n_mfcc=features).T, axis=0)
     val.append(mfccs)
     val = np.expand_dims(val, axis=1)
-    prediction = classes[np.argmax(gru_model.predict(val))]
+    prediction = classes[np.argmax(model.predict(val))]
     print(prediction)
     return prediction
 app = FastAPI()
