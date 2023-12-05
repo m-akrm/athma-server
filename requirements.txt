@@ -7,3 +7,4 @@ typing
 python-multipart
 resampy
 pydantic
+scipy
