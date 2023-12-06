@@ -56,3 +56,11 @@ async def process_data(data: List[int]):
     prediction=predict_class(resampled_data_1000hz)
     result = {"received_data": prediction}
     return result
+
+@app.post("/num")
+async def process_number(number: int):
+    # Perform any processing or validation here
+    # For this example, we'll just return the received number multiplied by 2.
+    result = number * 2
+
+    return {"result": result}
