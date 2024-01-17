@@ -3,7 +3,7 @@ uvicorn[standard]
 tensorflow
 numpy
 librosa
-
+typing
 python-multipart
 resampy
 pydantic
